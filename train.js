@@ -1,16 +1,40 @@
+// E-TASK:
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function findDoublers(str) {
+  const charMap = {};
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    if (charMap[char]) {
+      return true;
+    } else {
+      charMap[char] = true;
+    }
+  }
+  return false;
+}
+
+// Misol uchun:
+console.log(findDoublers("hello")); // true
+console.log(findDoublers("world")); // false
+
 /** D-TASK: 
 Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
-function checkContent(str1, str2) {
-  let sortedStr1 = str1.split("").sort().join("");
-  let sortedStr2 = str2.split("").sort().join("");
+// function checkContent(str1, str2) {
+//   let sortedStr1 = str1.split("").sort().join("");
+//   let sortedStr2 = str2.split("").sort().join("");
 
-  return sortedStr1 === sortedStr2;
-}
-console.log(checkContent("mitgroup", "gmtiprou")); // true
-console.log(checkContent("hello", "world")); // false
+//   return sortedStr1 === sortedStr2;
+// }
+// console.log(checkContent("mitgroup", "gmtiprou")); // true
+// console.log(checkContent("hello", "world")); // false
 
 /** MITASK-C 
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin,

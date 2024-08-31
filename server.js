@@ -22,7 +22,7 @@ mongodb.connect(
 
       const app = require("./app"); // app qabul qildik
       const server = http.createServer(app); // serverni boshlayapdi
-      let PORT = 3000;
+      let PORT = 1320;
       server.listen(PORT, function () {
         console.log(
           `The server is running successfully on port: ${PORT} http://localhost:${PORT}`
